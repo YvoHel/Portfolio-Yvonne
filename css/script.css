@@ -1,71 +1,155 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 2%;
-    background-color: #1b1108;
-    color: whitesmoke;
-    font-family: aileron, sans-serif;
+	box-sizing: border-box;
 }
 
-h1{
-    letter-spacing: 3px;
-    font-weight: 200;
+body {
+	margin: 2%;
+	background-color: #1b1108;
+	color: whitesmoke;
+	font-family: aileron, sans-serif;
 }
 
-.logo{
-    width: 100%;
-    max-width: 400px;
+h1 {
+	letter-spacing: 3px;
+	font-weight: 200;
+	text-align: center;
+	font-size: 1.8rem;
 }
 
-.card-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+h2 {
+	margin: 10px 0 5px;
+	color: #1b1108;
+	font-size: 1.4rem;
 }
 
-  .turn-card {
-    display: block;
-    margin: auto;
-   width: 100%;
-   max-width: 500px;
-  }
-  
-  .turn-card figure {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: 1s transform;
-    font-size: 1.4rem;
-    margin: 1rem ;
-  }
-  
-  .turn-card figure img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .turn-card figure figcaption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: rotateY(.5turn) translateZ(1px);
-    background: rgba(255, 255, 255, 0.9);
-    text-align: center;
-    padding-top:5px;
-    opacity: 0.6;
-    transition: 1s .5s opacity;
-  }
-  
-  .turn-card:hover figure {
-    transform: rotateY(.5turn);
-  }
-  
-  .turn-card:hover figure figcaption {
-    opacity: 1;
-  }
-  
+figcaption p {
+	color: #1b1108;
+	font-size: 1rem;
+	margin: 10px 5px;
+}
 
-  
+figcaption a {
+	background-color: #1b1108;
+	color: white;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 7px;
+	width: 70%;
+	margin: 0 auto 7px auto;
+}
+
+figure {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 1s transform;
+	font-size: 1.4rem;
+	margin: 1rem 0;
+}
+
+figure img {
+	width: 100%;
+	height: 100%;
+}
+
+figcaption {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transform: rotateY(0.5turn) translateZ(1px);
+	background: rgba(255, 255, 255, 0.9);
+	text-align: center;
+	opacity: 0;
+	transition: 1s 0.5s opacity;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+}
+
+.logo {
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	margin: auto;
+	padding: 10px;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.turn-card {
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width: 500px;
+}
+
+.turn-card:hover figure {
+	transform: rotateY(0.5turn);
+}
+
+.turn-card:hover figure figcaption {
+	opacity: 1;
+}
+
+@media screen and (min-width: 400px) {
+	h1 {
+		margin: 2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin: 1rem;
+	}
+
+	figcaption p {
+		font-size: 1.2rem;
+		margin: 1rem;
+	}
+
+	figcaption a {
+		font-size: 1.4rem;
+		padding: 7px;
+		width: 250px;
+		margin: 0 auto 10px auto;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	h1 {
+		margin: 2.5rem;
+		font-size: 2rem;
+	}
+
+	h2 {
+		margin: 3rem 0 1rem;
+	}
+
+	figcaption p {
+		font-size: 1.2rem;
+		margin: 1rem 1rem 2rem;
+	}
+
+	figcaption a {
+		font-size: 1.4rem;
+		padding: 7px;
+		max-width: 250px;
+		margin: 0 auto 10px auto;
+	}
+
+	.turn-card {
+		padding: 10px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	h1 {
+		margin: 5rem 0 3rem;
+		font-size: 2rem;
+	}
+}
